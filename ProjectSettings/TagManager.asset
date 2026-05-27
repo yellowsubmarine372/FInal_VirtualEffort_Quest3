@@ -31,6 +31,7 @@ TagManager:
   - QDSUIToggleCheckboxRadio
   - ClimbableCliff
   - ClimbableLadder
+  - FadeCanvas
   layers:
   - Default
   - TransparentFX
