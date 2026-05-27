@@ -3,6 +3,13 @@
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 .utmp/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# TempAssembly (generated)
+TempAssembly.dll
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
