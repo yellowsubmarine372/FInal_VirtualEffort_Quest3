@@ -16,7 +16,7 @@ namespace ReadyFriendsOne.Interaction
         public void TriggerLoad()
         {
             GameState.Stage = nextStage;
-            SceneLoader.Load(targetScene);
+            ReadyFriendsOne.Core.SceneLoader.Load(targetScene);
         }
     }
 }
