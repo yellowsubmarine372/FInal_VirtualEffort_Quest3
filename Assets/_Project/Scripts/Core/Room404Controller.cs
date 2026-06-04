@@ -23,9 +23,13 @@ namespace ReadyFriendsOne.Core
         [Header("Scene 1 말풍선 텍스트")]
         [SerializeField] private string scene1BubbleText = "오늘도 혼자 먹네…";
 
+        [Header("⚠️ 테스트용 — 배포 전 반드시 끄기")]
+        [Tooltip("체크하면 Stage와 무관하게 Scene 9(복귀) 버전으로 강제 표시")]
+        [SerializeField] private bool forceScene9ForTest = false;
+
         private void Start()
         {
-            if (GameState.Stage == StoryStage.Return)
+            if (forceScene9ForTest || GameState.Stage == StoryStage.Return)
                 SetupScene9();
             else
                 SetupScene1();
