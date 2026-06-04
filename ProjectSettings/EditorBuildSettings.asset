@@ -23,9 +23,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Project/Scenes/03_MemoryMusic.unity
     guid: bb0d3bac705b34dcab075599da7c5883
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Scenes/06_Promise.unity
     guid: 4a2abe40f85384aea91364efaaa13a1c
+  - enabled: 0
+    path: Assets/_Project/Scenes/07_Breakdown.unity
+    guid: 4daaf4eddc9298842b9253893b9a9f1d
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e47954ab42fb52042bcf5f2225a6e9e1, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: d1488ba3be60baf4fbc79a123219798c, type: 2}
