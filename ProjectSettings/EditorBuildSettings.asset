@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Project/Scenes/03_MemoryMusic.unity
     guid: bb0d3bac705b34dcab075599da7c5883
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/06_Promise.unity
     guid: 4a2abe40f85384aea91364efaaa13a1c
   m_configObjects:
