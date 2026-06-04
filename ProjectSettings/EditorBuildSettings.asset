@@ -11,16 +11,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/HW_09/NPCTalk.unity
     guid: 949280d64aad84a75a12f7bdbd9d2193
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/00_Bootstrap.unity
     guid: 3d578d867e665402caf3ca64f2147733
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/01_Room404.unity
     guid: 91e4660fe250b4d2989c873a71187671
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/02_Plaza.unity
     guid: 3d550f12463bf4e109b5f749ee3a1fa5
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/03_MemoryMusic.unity
     guid: bb0d3bac705b34dcab075599da7c5883
   - enabled: 1
