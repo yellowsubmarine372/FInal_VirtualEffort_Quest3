@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2160372004237433961}
   - component: {fileID: 3508108362798963462}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.102, z: 0.38}
-  m_LocalScale: {x: 0.053, y: 0.09, z: 1}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 303205568955439627}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dcc9d6e3359e3f245a7b9e3d0515ebc4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3e6427a64d09e7d47a0fd4568499f0ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2718209672516958411}
   - component: {fileID: 1490122843365563313}
   - component: {fileID: 5981064429234063843}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: explanation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 8091632205839533704}
   - component: {fileID: 8046517520042151091}
   - component: {fileID: 8643595428823529743}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Polaroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,8 +369,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 303205568955439627}
-  m_Layer: 0
-  m_Name: Polaroid
+  m_Layer: 7
+  m_Name: MemoryItem_Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,8 +384,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5614070318743012042}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.128, y: 2.002, z: -5.209841}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.086423, y: -0.34807682, z: -2.8372297}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
