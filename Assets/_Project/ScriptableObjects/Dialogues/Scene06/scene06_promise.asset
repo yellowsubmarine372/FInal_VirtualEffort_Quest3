@@ -30,9 +30,6 @@ MonoBehaviour:
     text: "\uB098\uB294 \uADF8\uACF3\uC5D0 \uAC08 \uC218 \uC5C6\uC5B4."
     autoAdvanceDelay: 2
   - speakerOverride: 
-    text: "\uC751 \uC6B0\uB9AC\uD559\uAD50 ECC."
-    autoAdvanceDelay: 2
-  - speakerOverride: 
     text: "\uB098\uB294 \uC5EC\uAE30\uC5D0\uC11C\uB9CC \uC874\uC7AC\uD574."
     autoAdvanceDelay: 2
   - speakerOverride: 
