@@ -1,10 +1,12 @@
 using UnityEngine;
 using System;
+using ReadyFriendsOne.Core;
 using ReadyFriendsOne.Dialogue;
+using UnityEngine.SceneManagement;
 
 public class CompanionController : MonoBehaviour, IDialogueTrigger
 {
-    [Header("´ë»ç µ¥ÀÌÅÍ ÆÄÀÏ (µå·¡±× ¾Ø µå·Ó)")]
+    [Header("ëŒ€ì‚¬ ë°ì´í„° (ë“œë˜ê·¸ ì•¤ ë“œë¡­)")]
     public DialogueData companionDialogueData;
 
     private Animator animator;
@@ -32,13 +34,28 @@ public class CompanionController : MonoBehaviour, IDialogueTrigger
         }
         else
         {
-            Debug.LogError("[CompanionController] ¾À¿¡ DialogueSystem ¿ÀºêÁ§Æ®°¡ ¾È º¸ÀÔ´Ï´Ù! ¹èÄ¡ÇØ ÁÖ¼¼¿ä.");
+            Debug.LogError("[CompanionController] ì”¬ì— DialogueSystem ì»´í¬ë„ŒíŠ¸ê°€ ì—†ìŠµë‹ˆë‹¤! í™•ì¸í•´ ì£¼ì„¸ìš”.");
         }
     }
 
     public void FinishDialogue()
     {
         if (animator != null) animator.SetTrigger("stopTalk");
-        if (OnDialogueEnd != null) OnDialogueEnd.Invoke();
+        OnDialogueEnd?.Invoke();
+
+        string scene = SceneManager.GetActiveScene().name;
+        switch (scene)
+        {
+            case "03_MemoryMusic":
+            case "04_MemoryMovie":
+            case "05_MemorySports":
+                GameState.Stage = StoryStage.Promise;
+                SceneLoader.Load("06_Promise");
+                break;
+            case "06_Promise":
+                GameState.Stage = StoryStage.GlitchSubtle;
+                SceneLoader.Load("07_Breakdown");
+                break;
+        }
     }
 }
