@@ -1701,6 +1701,7 @@ MonoBehaviour:
   anomalyManager: {fileID: 1293410743}
   companionNPC: {fileID: 929064748}
   afterReturnDialogue: {fileID: 11400000, guid: fb89ae93003fa884eb39c044cdb1df35, type: 2}
+  scene8TransitionDelay: 20
 --- !u!114 &1853245969 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3717296361152178566, guid: fba6397ad158ca44caa2eac09ba04299, type: 3}

@@ -685,28 +685,20 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5058458785182693068, guid: 77cb295e9c53a5145988df44fcff1c39, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2736120084139586408, guid: 77cb295e9c53a5145988df44fcff1c39, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1842317182}
+      addedObject: {fileID: 1842317184}
   m_SourcePrefab: {fileID: 100100000, guid: 77cb295e9c53a5145988df44fcff1c39, type: 3}
 --- !u!1 &1842317181 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5058458785182693068, guid: 77cb295e9c53a5145988df44fcff1c39, type: 3}
   m_PrefabInstance: {fileID: 1842317180}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1842317182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!1 &1842317182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2736120084139586408, guid: 77cb295e9c53a5145988df44fcff1c39, type: 3}
+  m_PrefabInstance: {fileID: 1842317180}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842317181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3263d99e40175f543968f0e52e4f487c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  companionDialogueData: {fileID: 11400000, guid: 6a4b7541f683b4797b4c40bf4d156a60, type: 2}
 --- !u!114 &1842317183 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1215362733959131107, guid: 77cb295e9c53a5145988df44fcff1c39, type: 3}
@@ -718,6 +710,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1842317184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842317182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3263d99e40175f543968f0e52e4f487c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  companionDialogueData: {fileID: 11400000, guid: 3e477976983e645faa62609f90e0b905, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
