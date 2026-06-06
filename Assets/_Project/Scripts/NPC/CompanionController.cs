@@ -47,7 +47,11 @@ public class CompanionController : MonoBehaviour, IDialogueTrigger
         switch (scene)
         {
             case "03_MemoryMusic":
+                ReadyFriendsOne.Core.SceneLoader.Load("04_MemoryMovie");
+                break;
             case "04_MemoryMovie":
+                ReadyFriendsOne.Core.SceneLoader.Load("05_MemorySports");
+                break;
             case "05_MemorySports":
                 GameState.Stage = StoryStage.Promise;
                 ReadyFriendsOne.Core.SceneLoader.Load("06_Promise");

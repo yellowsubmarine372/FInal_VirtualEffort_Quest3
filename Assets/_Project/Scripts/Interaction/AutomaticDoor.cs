@@ -20,6 +20,19 @@ public class AutomaticDoor : MonoBehaviour
     void Start()
     {
         _animator = GetComponent<Animator>();
+        if (anomalyManager != null)
+            StartCoroutine(Co_AutoAnomaly());
+    }
+
+    private IEnumerator Co_AutoAnomaly()
+    {
+        yield return new WaitForSeconds(10f);
+        anomalyManager.OnPlayerExitedRoom();
+        if (!_transitionScheduled)
+        {
+            _transitionScheduled = true;
+            StartCoroutine(Co_TransitionToScene8());
+        }
     }
 
     public void OpenDoor()
