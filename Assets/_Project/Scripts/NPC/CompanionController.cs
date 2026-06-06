@@ -50,11 +50,11 @@ public class CompanionController : MonoBehaviour, IDialogueTrigger
             case "04_MemoryMovie":
             case "05_MemorySports":
                 GameState.Stage = StoryStage.Promise;
-                SceneLoader.Load("06_Promise");
+                ReadyFriendsOne.Core.SceneLoader.Load("06_Promise");
                 break;
             case "06_Promise":
                 GameState.Stage = StoryStage.GlitchSubtle;
-                SceneLoader.Load("07_Breakdown");
+                ReadyFriendsOne.Core.SceneLoader.Load("07_Breakdown");
                 break;
         }
     }

@@ -63,6 +63,6 @@ public class AutomaticDoor : MonoBehaviour
     {
         yield return new WaitForSeconds(scene8TransitionDelay);
         GameState.Stage = StoryStage.GlitchCollapse;
-        SceneLoader.Load("08_Crack");
+        ReadyFriendsOne.Core.SceneLoader.Load("08_Crack");
     }
 }

@@ -111,7 +111,7 @@ public class Scene8_GlitchManager : MonoBehaviour
         {
             if (dialogueUIObject != null) dialogueUIObject.SetActive(false);
             GameState.Stage = StoryStage.Return;
-            SceneLoader.Load("01_Room404");
+            ReadyFriendsOne.Core.SceneLoader.Load("01_Room404");
             return;
         }
 
