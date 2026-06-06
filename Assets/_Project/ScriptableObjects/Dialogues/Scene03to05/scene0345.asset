@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueId: 
   lines:
-  - speakerOverride: 
+  - speakerOverride: "\uB458\uB9AC"
     text: "\uAC19\uC774 \uACF5\uAC04\uC744 \uB9CC\uB4E4\uC5B4\uBCF4\uC790!"
-    autoAdvanceDelay: 1
-  - speakerOverride: 
-    text: "\uB09C \uB458\uB9AC\uC57C"
-    autoAdvanceDelay: 1
+    autoAdvanceDelay: 0
+  - speakerOverride: "\uB458\uB9AC"
+    text: "\uB09C \uB458\uB9AC\uC57C."
+    autoAdvanceDelay: 0
+  - speakerOverride: "\uB458\uB9AC"
+    text: "\uC5EC\uAE30\uC11C \uD568\uAED8 \uBB78\uAC00 \uB9CC\uB4E4\uC5B4\uBCF4\uC790."
+    autoAdvanceDelay: 0
