@@ -135,6 +135,10 @@ PrefabInstance:
       value: XRPlayerRig
       objectReference: {fileID: 0}
     - target: {fileID: 6522338659871291927, guid: a4ff674630d86490aa277771bccde6f8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522338659871291927, guid: a4ff674630d86490aa277771bccde6f8, type: 3}
       propertyPath: GrabLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
@@ -181,7 +185,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1296120310130282120, guid: a4ff674630d86490aa277771bccde6f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1021099611}
+    - targetCorrespondingSourceObject: {fileID: 1296120310130282120, guid: a4ff674630d86490aa277771bccde6f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1021099610}
   m_SourcePrefab: {fileID: 100100000, guid: a4ff674630d86490aa277771bccde6f8, type: 3}
 --- !u!1001 &171730940
 PrefabInstance:
@@ -512,6 +522,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5337411849267447693, guid: f1ed58764d968b047b58d640e9cf1417, type: 3}
   m_PrefabInstance: {fileID: 335545960}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &796710293 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 580881254790151586, guid: a4ff674630d86490aa277771bccde6f8, type: 3}
+  m_PrefabInstance: {fileID: 55132565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1021099600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1296120310130282120, guid: a4ff674630d86490aa277771bccde6f8, type: 3}
+  m_PrefabInstance: {fileID: 55132565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1021099610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021099600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8733ebe23f85185428441f8c331788fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _capsule: {fileID: 0}
+  _skinWidth: 0.005
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  _maxSlopeAngle: 50
+  _maxStep: 0.3
+  _maxReboundSteps: 3
+  _headAnchor: {fileID: 0}
+  _feetAnchor: {fileID: 0}
+--- !u!114 &1021099611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021099600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229f550cec53c4fa2b0a139811bc2e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftRayOrigin: {fileID: 796710293}
+  maxDistance: 5
+  GrabLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1393366471
 GameObject:
   m_ObjectHideFlags: 0

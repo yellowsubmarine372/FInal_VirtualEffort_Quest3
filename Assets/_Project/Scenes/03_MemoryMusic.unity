@@ -330,25 +330,16 @@ PrefabInstance:
       addedObject: {fileID: 879564921}
     - targetCorrespondingSourceObject: {fileID: 1329480025823916, guid: efcddf8b8c5423141a291866540eb777, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 879564920}
+      addedObject: {fileID: 879564922}
+    - targetCorrespondingSourceObject: {fileID: 1329480025823916, guid: efcddf8b8c5423141a291866540eb777, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 879564923}
   m_SourcePrefab: {fileID: 100100000, guid: efcddf8b8c5423141a291866540eb777, type: 3}
 --- !u!1 &879564919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1329480025823916, guid: efcddf8b8c5423141a291866540eb777, type: 3}
   m_PrefabInstance: {fileID: 879564918}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &879564920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879564919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c3126313830649d09189b79bff5e07b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &879564921
 AudioSource:
   m_ObjectHideFlags: 0
@@ -445,6 +436,55 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &879564922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879564919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &879564923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879564919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6dd5f86fee04ebeab1880b7ffb09f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 879564921}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  oneShot: 0
 --- !u!1 &1084529400
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +590,10 @@ PrefabInstance:
     - target: {fileID: 1296120310130282120, guid: a4ff674630d86490aa277771bccde6f8, type: 3}
       propertyPath: m_Name
       value: XRPlayerRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405612822696510361, guid: a4ff674630d86490aa277771bccde6f8, type: 3}
+      propertyPath: _enableDynamicResolution
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9089865444784451095, guid: a4ff674630d86490aa277771bccde6f8, type: 3}
       propertyPath: m_LocalPosition.x

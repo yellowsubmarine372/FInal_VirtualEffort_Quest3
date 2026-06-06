@@ -9,24 +9,12 @@ public class HeadsetClick : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    void Update()
+    // Quest 컨트롤러 레이가 이 오브젝트에 닿은 상태에서 트리거 누르면 호출
+    public void OnClick()
     {
-        // 오른손 트리거로 클릭
-        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
-        {
-            RaycastHit hit;
-            // RayClickInteractor가 이미 있으니 레이캐스트 직접
-            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-            if (Physics.Raycast(ray, out hit, 10f))
-            {
-                if (hit.transform == transform || hit.transform.IsChildOf(transform))
-                {
-                    if (audioSource.isPlaying)
-                        audioSource.Stop();
-                    else
-                        audioSource.Play();
-                }
-            }
-        }
+        if (audioSource.isPlaying)
+            audioSource.Stop();
+        else
+            audioSource.Play();
     }
 }
