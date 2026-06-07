@@ -1,4 +1,6 @@
+using ReadyFriendsOne.Core;
 using ReadyFriendsOne.Dialogue;
+using System.Collections;
 using UnityEngine;
 
 public class AutomaticDoor : MonoBehaviour
@@ -6,14 +8,31 @@ public class AutomaticDoor : MonoBehaviour
     private Animator _animator;
     private int _playerCount = 0;
     private bool _hasReturnedDialoguePlayed = false;
+    private bool _transitionScheduled = false;
 
     public RoomAnomalyManager anomalyManager;
     public CompanionController companionNPC;
     public DialogueData afterReturnDialogue;
 
+    [Tooltip("Scene7: anomaly 발생 후 Scene8로 전환할 때까지 대기 시간(초)")]
+    public float scene8TransitionDelay = 20f;
+
     void Start()
     {
         _animator = GetComponent<Animator>();
+        if (anomalyManager != null)
+            StartCoroutine(Co_AutoAnomaly());
+    }
+
+    private IEnumerator Co_AutoAnomaly()
+    {
+        yield return new WaitForSeconds(10f);
+        anomalyManager.OnPlayerExitedRoom();
+        if (!_transitionScheduled)
+        {
+            _transitionScheduled = true;
+            StartCoroutine(Co_TransitionToScene8());
+        }
     }
 
     public void OpenDoor()
@@ -21,7 +40,7 @@ public class AutomaticDoor : MonoBehaviour
         _playerCount++;
         if (_playerCount == 1)
         {
-            _animator.SetBool("IsOpen", true);
+            if (_animator != null) _animator.SetBool("IsOpen", true);
 
             if (!_hasReturnedDialoguePlayed && companionNPC != null && afterReturnDialogue != null)
             {
@@ -38,11 +57,25 @@ public class AutomaticDoor : MonoBehaviour
 
         if (_playerCount == 0)
         {
-            _animator.SetBool("IsOpen", false);
+            if (_animator != null) _animator.SetBool("IsOpen", false);
+
             if (anomalyManager != null)
             {
                 anomalyManager.OnPlayerExitedRoom();
+
+                if (!_transitionScheduled)
+                {
+                    _transitionScheduled = true;
+                    StartCoroutine(Co_TransitionToScene8());
+                }
             }
         }
+    }
+
+    private IEnumerator Co_TransitionToScene8()
+    {
+        yield return new WaitForSeconds(scene8TransitionDelay);
+        GameState.Stage = StoryStage.GlitchCollapse;
+        ReadyFriendsOne.Core.SceneLoader.Load("08_Crack");
     }
 }

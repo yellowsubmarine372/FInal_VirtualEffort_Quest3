@@ -7,17 +7,17 @@ using ReadyFriendsOne.Dialogue;
 
 public class Scene8_GlitchManager : MonoBehaviour
 {
-    [Header("1. Á¶¸í ¹× È¯°æ ¼¼ÆÃ")]
+    [Header("1. ì¡°ëª… ë° í™˜ê²½ ì„¤ì •")]
     public LightFlicker targetLightFlicker;
     public Light actualLight;
     public List<GameObject> wallPhotos;
 
-    [Header("2. NPC ¼¼ÆÃ")]
+    [Header("2. NPC ì„¤ì •")]
     public Animator npcAnimator;
-    public Renderer npcRenderer; // GetComponentsInChildrenÀ» ¾²¹Ç·Î ÀÎ½ºÆåÅÍ¿¡¼­ ºñ¿öµÖµµ ÀÛµ¿ÇÕ´Ï´Ù.
+    public Renderer npcRenderer;
     public Color glitchColor = Color.cyan;
 
-    [Header("3. ´ë»ç ½Ã½ºÅÛ ¿¬µ¿")]
+    [Header("3. ëŒ€ì‚¬ ì‹œìŠ¤í…œ ì„¤ì •")]
     public DialogueData scene8Dialogue;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
@@ -33,11 +33,10 @@ public class Scene8_GlitchManager : MonoBehaviour
 
     private IEnumerator Co_PlayScene8Sequence()
     {
-        yield return new WaitForSeconds(1f); // ¾À ÁøÀÔ ÈÄ Àá½Ã ´ë±â
+        yield return new WaitForSeconds(1f);
 
         if (targetLightFlicker != null)
         {
-            Debug.Log("[Scene8] Á¶¸í ºÒ¾ÈÁ¤ ½ÃÀÛ + NPC ±Û¸®Ä¡ µ¿½Ã ¹ß»ı!");
             targetLightFlicker.AccelerateFlicker(0.02f);
         }
 
@@ -49,11 +48,10 @@ public class Scene8_GlitchManager : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         if (targetLightFlicker != null) targetLightFlicker.enabled = false;
-        if (actualLight != null) actualLight.intensity = 0f; // ¹æÀ» ¿ÏÀüÈ÷ ÄÄÄÄÇÏ°Ô ¾ÏÀü
+        if (actualLight != null) actualLight.intensity = 0f;
 
         yield return new WaitForSeconds(0.3f);
 
-        // ¾îµÒ ¼Ó¿¡¼­ º® »çÁøµéÀÌ ¼ø½Ä°£¿¡ ÀüºÎ »ç¶óÁı´Ï´Ù.
         foreach (GameObject photo in wallPhotos)
         {
             if (photo != null)
@@ -65,11 +63,11 @@ public class Scene8_GlitchManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
 
-        if (actualLight != null) actualLight.intensity = 1f; // ºÒ ´Ù½Ã ÄÑÁü
+        if (actualLight != null) actualLight.intensity = 1f;
 
         if (npcAnimator != null)
         {
-            npcAnimator.Play("Idle", 0, 0f); // ±Û¸®Ä¡ ¸ğ¼Ç ÁßÁö
+            npcAnimator.Play("Idle", 0, 0f);
         }
 
         if (npcAnimator != null)
@@ -80,20 +78,15 @@ public class Scene8_GlitchManager : MonoBehaviour
             foreach (Renderer rend in allRenderers)
             {
                 rend.GetPropertyBlock(propBlock);
-
                 propBlock.SetColor("_Color", glitchColor);
                 propBlock.SetColor("_BaseColor", glitchColor);
                 propBlock.SetColor("_MainColor", glitchColor);
-
                 rend.SetPropertyBlock(propBlock);
             }
-            Debug.Log($"[Scene8] MaterialPropertyBlockÀ» »ç¿ëÇÏ¿© {allRenderers.Length}°³ ·»´õ·¯ÀÇ »ö»óÀ» °­Á¦ °íÁ¤Çß½À´Ï´Ù.");
         }
 
         _isGlitchTriggered = true;
-
         StartScene8Dialogue();
-
     }
 
     private void StartScene8Dialogue()
@@ -105,7 +98,6 @@ public class Scene8_GlitchManager : MonoBehaviour
 
     private void Update()
     {
-        // ÀÌÁ¦ ½ºÀ§Ä¡°¡ ÄÑÁ³À¸¹Ç·Î ½ºÆäÀÌ½º¹Ù³ª VR A ¹öÆ°À» ´©¸£¸é Á¤»óÀûÀ¸·Î ´ë»ç°¡ ³Ñ¾î°©´Ï´Ù.
         if (_isGlitchTriggered && (OVRInput.GetDown(OVRInput.RawButton.A) || Input.GetKeyDown(KeyCode.Space)))
         {
             _dialogueIndex++;
@@ -118,7 +110,8 @@ public class Scene8_GlitchManager : MonoBehaviour
         if (scene8Dialogue == null || _dialogueIndex >= scene8Dialogue.lines.Length)
         {
             if (dialogueUIObject != null) dialogueUIObject.SetActive(false);
-            Debug.Log("[Scene8] ´ë»ç Á¾·á - ÇÃ·¹ÀÌ¾î ÅğÀå.");
+            GameState.Stage = StoryStage.Return;
+            ReadyFriendsOne.Core.SceneLoader.Load("01_Room404");
             return;
         }
 
