@@ -6,31 +6,31 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Project/Scenes/00_Bootstrap.unity
+    path: Assets/Final/Scenes/00_Bootstrap.unity
     guid: 3d578d867e665402caf3ca64f2147733
   - enabled: 1
-    path: Assets/_Project/Scenes/01_Room404.unity
+    path: Assets/Final/Scenes/01_Room404.unity
     guid: 91e4660fe250b4d2989c873a71187671
   - enabled: 1
-    path: Assets/_Project/Scenes/02_Plaza.unity
+    path: Assets/Final/Scenes/02_Plaza.unity
     guid: 3d550f12463bf4e109b5f749ee3a1fa5
   - enabled: 1
-    path: Assets/_Project/Scenes/03_MemoryMusic.unity
+    path: Assets/Final/Scenes/03_MemoryMusic.unity
     guid: bb0d3bac705b34dcab075599da7c5883
   - enabled: 1
-    path: Assets/_Project/Scenes/04_MemoryMovie.unity
+    path: Assets/Final/Scenes/04_MemoryMovie.unity
     guid: 5c281c8c594a54028885930aa00af83c
   - enabled: 1
-    path: Assets/_Project/Scenes/05_MemorySports.unity
+    path: Assets/Final/Scenes/05_MemorySports.unity
     guid: 94ff9e6da27a2424f80faf6190ab71ed
   - enabled: 1
-    path: Assets/_Project/Scenes/06_Promise.unity
+    path: Assets/Final/Scenes/06_Promise.unity
     guid: 4a2abe40f85384aea91364efaaa13a1c
   - enabled: 1
-    path: Assets/_Project/Scenes/07_Breakdown.unity
+    path: Assets/Final/Scenes/07_Breakdown.unity
     guid: 4daaf4eddc9298842b9253893b9a9f1d
   - enabled: 1
-    path: Assets/_Project/Scenes/08_Crack.unity
+    path: Assets/Final/Scenes/08_Crack.unity
     guid: 255ef80f027858a48bcb8631b407bc9e
   - enabled: 0
     path: Assets/D11_HandInteraction/EX_HandInteraction.unity
